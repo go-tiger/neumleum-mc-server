@@ -48,7 +48,6 @@ const getMinecraftOnlinePlayer = async () => {
 
     return data.players.online;
   } catch (e) {
-    console.log(e);
     return 'None';
   }
 };
