@@ -2,8 +2,7 @@ const config = {
   serverInfo: {
     serverLogoImageFileName: 'logo.png',
     serverName: '늠름서버',
-    serverIp: 'boreum1.k-r.pw',
-    serverIp2: 'gotiger.ipdisk.co.kr:12270',
+    serverIp: 'neumleum.k-r.pw',
     discordServerID: '1119157550466740254',
   },
 };
@@ -41,9 +40,9 @@ const getDiscordOnlineUsers = async () => {
 
 const getMinecraftOnlinePlayer = async () => {
   try {
-    const serverIp2 = config.serverInfo.serverIp2;
+    const serverIp = config.serverInfo.serverIp;
 
-    const apiUrl = `https://api.mcsrvstat.us/2/${serverIp2}`;
+    const apiUrl = `https://api.mcsrvstat.us/2/${serverIp}`;
     let response = await fetch(apiUrl);
     let data = await response.json();
 
