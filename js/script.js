@@ -31,10 +31,6 @@ const getDiscordOnlineUsers = async () => {
     const apiWidgetUrl = `https://discord.com/api/guilds/${discordServerId}/widget.json`;
     let response = await fetch(apiWidgetUrl);
     let data = await response.json();
-    console.log(
-      '🚀  file: script.js:40  data.presence_count:',
-      data.presence_count
-    );
 
     if (!data.presence_count) return 'None';
     else return await data.presence_count;
