@@ -4,7 +4,7 @@ const config = {
     serverName: '늠름서버',
     serverIp: 'boreum1.k-r.pw',
     serverIp2: 'gotiger.ipdisk.co.kr:12270',
-    discordServerID: '807591456491569182',
+    discordServerID: '1119157550466740254',
   },
 };
 
@@ -31,6 +31,10 @@ const getDiscordOnlineUsers = async () => {
     const apiWidgetUrl = `https://discord.com/api/guilds/${discordServerId}/widget.json`;
     let response = await fetch(apiWidgetUrl);
     let data = await response.json();
+    console.log(
+      '🚀  file: script.js:40  data.presence_count:',
+      data.presence_count
+    );
 
     if (!data.presence_count) return 'None';
     else return await data.presence_count;
