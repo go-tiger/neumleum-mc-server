@@ -298,6 +298,8 @@
   justify-content: space-between;
   align-items: center;
   gap: 60px;
+  font-size: large;
+  color: white;
 }
 
 #minigames .content .game:nth-child(even) img {
@@ -358,6 +360,10 @@
 .services-wrap {
   padding: 10px 0 0 4px;
   font-weight: bold;
+}
+
+.services {
+  padding: 10px;
 }
 
 /*Animations*/
