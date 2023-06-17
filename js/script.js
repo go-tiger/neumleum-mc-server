@@ -3,6 +3,7 @@ const config = {
     serverLogoImageFileName: 'logo.png',
     serverName: '늠름서버',
     serverIp: 'neumleum.k-r.pw',
+    serverIp2: 'gotiger.iptime.org:12270',
     discordServerID: '1119157550466740254',
   },
 };
@@ -40,11 +41,12 @@ const getDiscordOnlineUsers = async () => {
 
 const getMinecraftOnlinePlayer = async () => {
   try {
-    const serverIp = config.serverInfo.serverIp;
+    const serverIp2 = config.serverInfo.serverIp2;
 
-    const apiUrl = `https://api.mcsrvstat.us/2/${serverIp}`;
+    const apiUrl = `https://api.mcsrvstat.us/2/${serverIp2}`;
     let response = await fetch(apiUrl);
     let data = await response.json();
+    console.log(data.players.online);
 
     return data.players.online;
   } catch (e) {
